@@ -1,0 +1,13 @@
+name: basecr
+version: 0.1.0
+
+authors:
+  - Luca Mathias <luca.mathias@posteo.de>
+
+targets:
+  basecr:
+    main: src/basecr.cr
+
+crystal: '>= 1.12.1'
+
+license: MIT
