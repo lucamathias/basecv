@@ -1,3 +1,5 @@
+require "./exceptions"
+
 class Converter
   setter upcase
   getter base, new_base, upcase
@@ -23,7 +25,7 @@ class Converter
 
   def check_base(base)
     if base < 2 || base > 36
-      raise "ERROR: invalid base, must be between 2 and 36 but was #{base}"
+      raise InvalidBaseException.new(base)
     end
   end
 
@@ -32,6 +34,10 @@ class Converter
     output = num.to_i(base).to_s(new_base)
     upcase ? output.upcase : output
   rescue ex
-    raise "ERROR: input '#{num}' does not fit the base '#{base}'."
+    if ex.is_a? InvalidBaseException
+      raise ex
+    else
+      raise WrongBaseException.new(num, base)
+    end
   end
 end
