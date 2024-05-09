@@ -8,7 +8,7 @@ module Basecv
   usage = IO::Memory.new
 
   OptionParser.parse do |parser|
-    parser.banner = "Usage: basecr <num> [options]"
+    parser.banner = "Usage: basecv <num> [options]"
     parser.on("-b <base>", "--from <base>", "Base of the input, default = 10") do |b|
       begin
         base = b.to_i
