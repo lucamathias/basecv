@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Basecr do
+describe Basecv do
   # TODO: Write tests
 
   it "works" do

@@ -1,4 +1,4 @@
-name: basecr
+name: basecv
 version: 0.1.0
 
 authors:
@@ -6,7 +6,7 @@ authors:
 
 targets:
   basecr:
-    main: src/basecr.cr
+    main: src/basecv.cr
 
 crystal: '>= 1.12.1'
 
