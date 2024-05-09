@@ -43,7 +43,7 @@ module Basecv
   end
 
   if ARGV.size == 0
-    STDERR.puts "ERROR: no arguments provided."
+    STDERR.puts "ERROR: no input number provided."
     STDERR.puts usage
     exit(1)
   end
