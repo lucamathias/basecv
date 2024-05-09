@@ -2,12 +2,13 @@ name: basecv
 version: 0.1.0
 
 authors:
-  - Luca Mathias <luca.mathias@posteo.de>
+  - Luca Mathias <lmathias@posteo.de>
 
-targets:
-  basecr:
-    main: src/basecv.cr
-
-crystal: '>= 1.12.1'
+description: |
+  A small and simple CLI program to convert numbers between bases
 
 license: MIT
+
+targets:
+  basecv:
+    main: src/basecv.cr
