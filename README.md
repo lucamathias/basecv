@@ -10,8 +10,8 @@ TODO: Write installation instructions here
 
 ```console
 Usage: basecv <num> [options]
-    -b <base>, --from <base>         Base of the input, default = 10
-    -B <base>, --to <base>           Base of the output, default = 16
+    -f <base>, --from <base>         Base of the input, default = 10
+    -t <base>, --to <base>           Base of the output, default = 16
     -u, --upcase                     Upcase the result
     -h, --help                       Show this help
 ```

@@ -9,22 +9,22 @@ module Basecv
 
   OptionParser.parse do |parser|
     parser.banner = "Usage: basecv <num> [options]"
-    parser.on("-b <base>", "--from <base>", "Base of the input, default = 10") do |b|
+    parser.on("-f <base>", "--from <base>", "Base of the input, default = 10") do |from|
       begin
-        base = b.to_i
+        base = from.to_i
         raise Exception.new if base < 2
       rescue ex : Exception
-        STDERR.puts "ERROR: '#{b}' is not a valid base."
+        STDERR.puts "ERROR: '#{from}' is not a valid base."
         STDERR.puts parser
         exit(1)
       end
     end
-    parser.on("-B <base>", "--to <base>", "Base of the output, default = 16") do |nb|
+    parser.on("-t <base>", "--to <base>", "Base of the output, default = 16") do |to|
       begin
-        new_base = nb.to_i
+        new_base = to.to_i
         raise Exception.new if base < 2
       rescue ex : Exception
-        STDERR.puts "ERROR: '#{nb}' is not a valid base."
+        STDERR.puts "ERROR: '#{to}' is not a valid base."
         STDERR.puts parser
         exit(1)
       end
