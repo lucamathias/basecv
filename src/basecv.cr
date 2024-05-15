@@ -7,17 +7,17 @@ usage = IO::Memory.new
 converter = Converter.new
 begin
   OptionParser.parse do |parser|
-    parser.banner = "Usage: basecv <num> [options]"
+    parser.banner = "Usage: basecv [options] <num>"
     parser.on("-f <base>", "--from <base>", "Base of the input [2-36], default = 10") do |from|
       base = from.to_i
       converter.base = base
-    rescue arg : ArgumentError
+    rescue error : ArgumentError
       raise InvalidBaseException.new(from)
     end
     parser.on("-t <base>", "--to <base>", "Base of the output [2-36], default = 16") do |to|
       new_base = to.to_i
       converter.new_base = new_base
-    rescue arg : ArgumentError
+    rescue error : ArgumentError
       raise InvalidBaseException.new(to)
     end
     parser.on("-u", "--upcase", "Upcase the result") { converter.upcase = true }

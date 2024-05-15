@@ -28,6 +28,11 @@ describe Converter do
       converter.convert("35").should eq "z"
     end
 
+    it "handles large numbers" do
+      converter = Converter.new(10, 25)
+      converter.convert("3423353456346456456456553453453453654").should eq "1ddehhi32cfnd74e3lihk8fl0l4"
+    end
+
     it "raises and exception for invalid base" do
       converter = Converter.new
     end

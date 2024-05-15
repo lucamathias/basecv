@@ -1,3 +1,4 @@
+require "big"
 require "./exceptions"
 
 class Converter
@@ -31,7 +32,8 @@ class Converter
 
   # takes a number of @base as String and converts it to @new_base
   def convert(num : String)
-    output = num.to_i(base).to_s(new_base)
+    i = BigInt.new(str: num, base: base)
+    output = i.to_s(new_base)
     upcase ? output.upcase : output
   rescue ex
     if ex.is_a? InvalidBaseException
