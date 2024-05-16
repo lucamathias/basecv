@@ -33,8 +33,15 @@ describe Converter do
       converter.convert("3423353456346456456456553453453453654").should eq "1ddehhi32cfnd74e3lihk8fl0l4"
     end
 
+    it "handles negative numbers" do
+      converter = Converter.new(10, 2)
+      converter.convert("-17").should eq "-10001"
+    end
+
     it "raises and exception for invalid base" do
-      converter = Converter.new
+      expect_raises(Exception) do
+        _converter = Converter.new(2, 66)
+      end
     end
 
     it "does not upcase on default" do
