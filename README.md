@@ -27,7 +27,7 @@ Convert "ABC" from hexadecimal to binary:
 $ basecv -f 16 -t 2 ABC
 101010111100
 ```
-Convert "22222222222221222222222" from ternary to octodecimal (for whatever reason):
+Convert "22222222222221222222222" from ternary to octodecimal (for whatever reason...):
 ```console 
 $ basecv -f 3 -t 18 22222222222221222222222
 89dga8hhh
