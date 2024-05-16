@@ -7,8 +7,8 @@ For now, only positive integers are supported.
 
 - [x] positive integers
 - [ ] negative integers
-- [ ] positive floating point
-- [ ] negative floating point
+- [ ] positive decimal
+- [ ] negative decimal
 
 ## Installation
 
