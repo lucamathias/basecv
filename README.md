@@ -3,12 +3,7 @@
 This is a small and simple command line tool to convert numbers between bases. All bases that are displayable with digits
 and the latin alphabet [2-36] are supported.
 
-For now, only positive integers are supported.
-
-- [x] positive integer
-- [ ] negative integer
-- [ ] positive decimal
-- [ ] negative decimal
+For now only integers are supported.
 
 ## Installation
 
@@ -23,11 +18,18 @@ Usage: basecv [options] <num>
     -u, --upcase                     Upcase the result
     -h, --help                       Show this help
 ```
+Negative numbers have to be passed with a '--' in front of them.
+
 ### Examples:
 Convert "100" from decimal to hexadecimal:
 ```console 
 $ basecv 100
 64
+```
+Convert "-17" from decimal to binary: 
+```console 
+$ basecv -t 2 -- -17
+-10001
 ```
 Convert "ABC" from hexadecimal to binary:
 ```console 
