@@ -3,6 +3,13 @@
 This is a small and simple command line tool to convert numbers between bases. All bases that are displayable with digits
 and the latin alphabet [2-36] are supported.
 
+For now, only positive integers are supported.
+
+- [x] positive integers
+- [ ] negative integers
+- [ ] positive floating point
+- [ ] negative floating point
+
 ## Installation
 
 TODO: Write installation instructions here
