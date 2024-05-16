@@ -5,8 +5,8 @@ and the latin alphabet [2-36] are supported.
 
 For now, only positive integers are supported.
 
-- [x] positive integers
-- [ ] negative integers
+- [x] positive integer
+- [ ] negative integer
 - [ ] positive decimal
 - [ ] negative decimal
 
